@@ -52,7 +52,7 @@ def _plot_signal_and_augmented_signal(signal, augmented_signal, sr):
 
 if __name__ == "__main__":
     signal, sr = librosa.load("scale.wav")
-    augmented_signal = random_gain(signal,2,4)
+    augmented_signal = pitch_scale(signal,sr,2)
     sf.write("augmented_audio.wav", augmented_signal, sr)
     _plot_signal_and_augmented_signal(signal, augmented_signal, sr)
         
